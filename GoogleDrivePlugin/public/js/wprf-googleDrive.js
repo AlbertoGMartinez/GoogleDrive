@@ -73,14 +73,10 @@ function googleDriveMain()
 
   function postDownload (resp) {
     var link;
-    var image;
     var data = jQuery.parseJSON( resp );
-    //alert(data.iconLink);
     if (data.mimeType == "application/pdf"){
       link = data.downloadUrl;
-      image = data.iconLink;
-      alert(image);
-      initPicker (link,image);
+      initPicker (link);
     } else {
         link = (data.exportLinks)['application/pdf'];
       }
@@ -96,7 +92,6 @@ function googleDriveMain()
       xhr.open('GET', 'https://www.googleapis.com/drive/v2/files/' + document_id);
       xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
       xhr.onload = function() {
-        //alert(xhr.responseText);
         postDownload(xhr.responseText);
       };
       xhr.onerror = function() {
@@ -108,7 +103,7 @@ function googleDriveMain()
 
   onApiLoad();
 
-  function initPicker(url, image) {
+  function initPicker(url) {
     x = 0;
     f = 'cv_googleDrive';
     var mi = document.createElement("input");
@@ -118,34 +113,5 @@ function googleDriveMain()
     mi.setAttribute('value', '');
     mi.setAttribute("value",  url) ;
     document.getElementById('cv').appendChild(mi);
-
-
-    alert();
-    var image = document.createElement("img");
-    
-    image.setAttribute('height', '24px');
-    document.getElementById('cv').appendChild(image);
-    image.setAttribute('src', image);
-    //image
-    //var title = document.createElement("img");
-
-    //$( '#'+f+'-files' ).append(
-      //          $( '<div></div>' ).attr({
-        //            'class': 'icon-dropbox',
-          //          'id': f+'-file-dropbox-'+x
-            //    }).append(
-              //      $( '<img>' ).attr( {
-                //       'src': files[fi].icon,
-                 //       'height': '24px'
-                  //  })
-                //).append(
-                 //   files[fi].name
-                //).append(
-                  //  $( '<span></span>' ).attr({
-                    //    'class': 'icon-remove',
-                      //  'data-x': x
-                    //})
-
-
   }      
 }
