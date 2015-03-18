@@ -88,7 +88,7 @@ class ScriptRegister
     public function _registerGoogleDriveHandlerScript()
     {
 
-        wp_register_script('googleDrive', plugins_url() . '/GoogleDrive-plugin/' . '/public/js/GoogleDrive.js', ['jquery']);
+        wp_register_script('googleDrive', plugins_url() . '/GoogleDrivePlugin/' . '/public/js/GoogleDrive.js', ['jquery']);
 
         //do not load the scripts in admin pages
         if ( is_admin() ) {
