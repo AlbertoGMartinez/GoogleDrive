@@ -1,11 +1,11 @@
 <?php
-namespace Wprf\GoogleDrive;
+namespace Netwerven\GoogleDrive;
 
 /**
  * Handles the GoogleDrive browse process for GoogleDrive Api v2
  *
- * @author 
- * @link
+ * @author Alberto Godino Martinez
+ * @link www.netwerven.nl
  *
  */
 class GoogleDrive

@@ -1,11 +1,11 @@
 <?php
-namespace Wprf\GoogleDrive;
+namespace Netwerven\GoogleDrive;
 
 /**
  * Registers the required javascript files for the googleDrive api to work
  *
- * @author 
- * @link 
+ * @author Alberto Godino Martinez
+ * @link www.netwerven.nl
  *
  */
 class ScriptRegister
@@ -58,7 +58,7 @@ class ScriptRegister
         if(!$post){
             return false;
         }
-        echo '<script id=googleDrivejs type="text/javascript" src="https://apis.google.com/js/client.js" googleDriveApiKey =' . $this->googleDriveApiKey .' developerKey =' . $this->developerKey .' appId =' . $this->appId .'></script>';
+        echo '<script id=googleDrivejs type="text/javascript" src="https://apis.google.com/js/client.js" data-google_drive_api_key =' . $this->googleDriveApiKey .' data-developer_key =' . $this->developerKey .' data-app_id =' . $this->appId .'></script>';
         echo '<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>'; 
         echo '<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>'; 
     }
@@ -88,7 +88,7 @@ class ScriptRegister
     public function _registerGoogleDriveHandlerScript()
     {
 
-        wp_register_script('googleDrive', plugins_url() . '/wprf-googleDrive/' . '/public/js/wprf-googleDrive.js', ['jquery']);
+        wp_register_script('googleDrive', plugins_url() . '/GoogleDrive-plugin/' . '/public/js/GoogleDrive.js', ['jquery']);
 
         //do not load the scripts in admin pages
         if ( is_admin() ) {

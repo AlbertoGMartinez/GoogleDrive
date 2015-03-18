@@ -1,3 +1,4 @@
+
 jQuery(function($) {
     $("#cv").click(
         function() {
@@ -9,13 +10,13 @@ jQuery(function($) {
 function googleDriveMain()
 {
   // The developer key obtained from the Google Developers Console. Replace with your own (wp-admin).
-  var developerKey = document.getElementById("googleDrivejs").getAttribute("googleDriveApiKey");
+  var developerKey = document.getElementById("googleDrivejs").getAttribute("data-google_drive_api_key");
 
   // The Client ID obtained from the Google Developers Console. Replace with your own Client ID (wp-admin).
-  var clientId = document.getElementById("googleDrivejs").getAttribute("developerKey");
+  var clientId = document.getElementById("googleDrivejs").getAttribute("data-developer_key");
 
   // Replace with your own App ID. (Its the first number in your Client ID)(wp-admin)
-  var appId =document.getElementById("googleDrivejs").getAttribute("appId");
+  var appId =document.getElementById("googleDrivejs").getAttribute("data-app_id");
 
   // Scope to use to access user's Drive items.
   var scope = ['https://www.googleapis.com/auth/drive'];
@@ -109,7 +110,7 @@ function googleDriveMain()
     var mi = document.createElement("input");
     mi.setAttribute('type', 'hidden');
     mi.setAttribute('class', 'file');
-    mi.setAttribute('name', 'upload[cv_googleDrive][googleDrive][' + x + '][url]');
+    mi.setAttribute('name', 'upload[file_googleDrive][googleDrive][' + x + '][url]');
     mi.setAttribute('value', '');
     mi.setAttribute("value",  url) ;
     document.getElementById('cv').appendChild(mi);

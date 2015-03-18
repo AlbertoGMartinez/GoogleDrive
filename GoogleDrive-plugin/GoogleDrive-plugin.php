@@ -1,11 +1,11 @@
 <?php
-use Wprf\GoogleDrive\GoogleDrive;
-use Wprf\GoogleDrive\AdminSettings;
+use Netwerven\GoogleDrive\GoogleDrive;
+use Netwerven\GoogleDrive\AdminSettings;
 /**
  * @package WordPress Recruitment Framework
  */
 /*
-Plugin Name: WPRF GoogleDrive
+Plugin Name: Google Drive plugin for retrieving files
 Plugin URI: http://www.netwerven.nl
 Description: Adds functionalities for browsing/submitting a file from googleDrive
 Version: 0.1

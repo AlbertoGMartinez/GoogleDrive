@@ -1,12 +1,12 @@
 <?php
-namespace Wprf\GoogleDrive;
+namespace Netwerven\GoogleDrive;
 
 /**
  * Handles the display/submit of settings in wp-admin for the googleDrive plugin
  * The settings are found under WPR_setttings, GoogleDrive tab
  *
- * @author 
- * @link 
+ * @author Alberto Godino Martinez
+ * @link www.netwerven.nl
  *
  */
 class AdminSettings
