@@ -1,2 +1,2 @@
 # GoogleDrive
-Plugin for retrieving files from googleDrive
+Plugin for retrieving files from googleDrive.
